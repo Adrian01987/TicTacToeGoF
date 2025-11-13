@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TicTacToeGoF.UI": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
