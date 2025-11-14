@@ -31,7 +31,7 @@ public class PlaceMarkCommandTests
         command.Undo();    // Board should revert to only having X at (0,0)
 
         // Assert
-        Assert.Equal(Symbol.X, board.GetCell(0, 0).Symbol);
-        Assert.Equal(Symbol.None, board.GetCell(1, 1).Symbol); // This cell should be empty again
+        board.GetCell(0, 0).Symbol.Should().Be(Symbol.X);
+        board.GetCell(1, 1).Symbol.Should().Be(Symbol.None, "the cell should be empty after undoing the move");
     }
 }

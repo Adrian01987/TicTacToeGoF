@@ -24,7 +24,7 @@ public class PlayerFactoryTests
         var player = _factory.CreatePlayer("Alice", Symbol.X, PlayerType.Human);
 
         // Assert
-        Assert.IsType<HumanPlayer>(player);
+        player.Should().BeOfType<HumanPlayer>();
     }
 
     [Fact]
@@ -34,6 +34,6 @@ public class PlayerFactoryTests
         var player = _factory.CreatePlayer("Bob", Symbol.O, PlayerType.Computer);
 
         // Assert
-        Assert.IsType<ComputerPlayer>(player);
+        player.Should().BeOfType<ComputerPlayer>();
     }
 }

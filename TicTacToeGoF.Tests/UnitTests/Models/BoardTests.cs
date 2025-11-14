@@ -24,7 +24,7 @@ public class BoardTests
         var result = board.CheckForWin(Symbol.X);
 
         // Assert
-        Assert.True(result);
+        result.Should().BeTrue();
     }
 
     [Fact]
@@ -50,7 +50,7 @@ public class BoardTests
         var hasWinner = board.CheckForWin(Symbol.X) || board.CheckForWin(Symbol.O);
 
         // Assert
-        Assert.True(isDraw);
-        Assert.False(hasWinner);
+        isDraw.Should().BeTrue();
+        hasWinner.Should().BeFalse();
     }
 }
